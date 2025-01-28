@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        .text-color{
+            color: darkblue;
+        }
+        body {
+            background-color: #f0f0f0;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+        table {
+            background-color: #fffdd0; /* Cream */
+        }
+        td {
+            background-color: #fffdd0; /* Cream */
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table border="1" width="100%" height="100%">
+        <tr>
+            <td align="center" valign="middle">
+                <form>
+                    <table border="0" width="500">
+                        <tr>
+                            <td colspan="2" align="center">
+                                <h2>Registration Form</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="text-color">Name:</td>
+                            <td><input type="text" name="name" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="text-color">ID:</td>
+                            <td><input type="text" name="id" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="text-color">Password:</td>
+                            <td><input type="password" name="password" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="text-color"> E-Mail: </td>
+                            <td><input type="email" name="email" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="text-color"> Age:</td>
+                            <td><input type="number" name="age" required></td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="text-color"> Gender:</td>
+                            <td>
+                                <input type="radio" name="gender" value="male"> Male
+                                <input type="radio" name="gender" value="female"> Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Branch:</td>
+                            <td>
+                                <select name="branch">
+                                    <option value="">Select Branch</option>
+                                    <option value="CSE">Computer Science</option>
+                                    <option value="IT">Information Technology</option>
+                                    <option value="ECE">Electronics</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Technical Skills:</td>
+                            <td>
+                                <input type="checkbox" name="skills" value="C"> C
+                                <input type="checkbox" name="skills" value="Java"> Java
+                                <input type="checkbox" name="skills" value="Python"> Python
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Resume:</td>
+                            <td><input type="file" name="resume"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input type="submit" value="Register">
+                                <input type="reset" value="Reset">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

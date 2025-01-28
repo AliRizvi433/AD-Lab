@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title" name="title">Open Forum</title>
+</head>
+<body id="body" name="body">
+    <table id="main-table" name="main-table" border="1" width="100%" height="100%">
+        <tr id="main-row" name="main-row">
+            <td id="main-cell" name="main-cell" align="center">
+                <table id="inner-table" name="inner-table" border="0" width="80%">
+                    <tr id="header-row" name="header-row">
+                        <td id="header-cell" name="header-cell" colspan="2" align="center">
+                            <h2 id="header-title" name="header-title">Open Forum Discussion</h2>
+                        </td>
+                    </tr>
+                    
+                    <!-- Post Creation Section -->
+                    <tr id="post-creation-row" name="post-creation-row">
+                        <td id="post-creation-cell" name="post-creation-cell" colspan="2">
+                            <form id="post-creation-form" name="post-creation-form">
+                                <table id="post-creation-table" name="post-creation-table" border="1" width="100%">
+                                    <tr id="post-creation-header-row" name="post-creation-header-row">
+                                        <td id="post-creation-header-cell" name="post-creation-header-cell" align="center">
+                                            <h3 id="post-creation-title" name="post-creation-title">Create New Post</h3>
+                                            <table id="post-creation-inner-table" name="post-creation-inner-table" border="0" width="90%">
+                                                <tr id="topic-row" name="topic-row">
+                                                    <td id="topic-label-cell" name="topic-label-cell">Topic:</td>
+                                                    <td id="topic-input-cell" name="topic-input-cell"><input id="topic-input" name="topic-input" type="text" name="topic" size="50"></td>
+                                                </tr>
+                                                <tr id="message-row" name="message-row">
+                                                    <td id="message-label-cell" name="message-label-cell">Message:</td>
+                                                    <td id="message-input-cell" name="message-input-cell"><textarea id="message-textarea" name="message-textarea" name="message" rows="4" cols="50"></textarea></td>
+                                                </tr>
+                                                <tr id="post-button-row" name="post-button-row">
+                                                    <td id="post-button-cell" name="post-button-cell" colspan="2" align="center">
+                                                        <input id="post-button" name="post-button" type="submit" value="Post">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+
+                    <!-- Sample Discussion Threads -->
+                    <tr id="discussions-row" name="discussions-row">
+                        <td id="discussions-cell" name="discussions-cell" colspan="2">
+                            <h3 id="discussions-title" name="discussions-title">Recent Discussions</h3>
+                            <table id="discussions-table" name="discussions-table" border="1" width="100%">
+                                <tr id="discussions-header-row" name="discussions-header-row">
+                                    <th id="topic-header" name="topic-header">Topic</th>
+                                    <th id="posted-by-header" name="posted-by-header">Posted By</th>
+                                    <th id="date-header" name="date-header">Date</th>
+                                    <th id="replies-header" name="replies-header">Replies</th>
+                                </tr>
+                                <tr id="discussion-1-row" name="discussion-1-row">
+                                    <td id="discussion-1-topic" name="discussion-1-topic"><a id="discussion-1-link" name="discussion-1-link" href="#">Programming Basics Discussion</a></td>
+                                    <td id="discussion-1-posted-by" name="discussion-1-posted-by">John Doe</td>
+                                    <td id="discussion-1-date" name="discussion-1-date">2025-01-05</td>
+                                    <td id="discussion-1-replies" name="discussion-1-replies">5</td>
+                                </tr>
+                                <tr id="discussion-2-row" name="discussion-2-row">
+                                    <td id="discussion-2-topic" name="discussion-2-topic"><a id="discussion-2-link" name="discussion-2-link" href="#">Web Development Tips</a></td>
+                                    <td id="discussion-2-posted-by" name="discussion-2-posted-by">Jane Smith</td>
+                                    <td id="discussion-2-date" name="discussion-2-date">2025-01-06</td>
+                                    <td id="discussion-2-replies" name="discussion-2-replies">3</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

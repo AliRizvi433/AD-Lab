@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Student Details and Grade</title>
+    </head>
+    <body>
+        <table border="0" width="500">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>Student Details and Grade</h2>
+                </td>
+            </tr>
+            <form>
+            <tr>
+                <td align="right">Name:</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td align="right">Roll Number:</td>
+                <td><input type="number" name="Roll" max="100" required></td>
+            </tr>
+            <tr>
+                <td align="right">Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Branch:</td>
+                <td>
+                    <select name="branch">
+                        <option value="">Select Branch</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="Civil">Civil</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Electrical">Electrical</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Marks:</td>
+            </tr>
+            <tr>
+                <td align="right">Subject 1:</td>
+                <td><input type="number" name="sub1" max="100" required></td>
+            </tr>
+            <tr>
+                <td align="right">Subject 2:</td>
+                <td><input type="number" name="sub2" max="100" required></td>
+            </tr>
+            <tr>
+                <td align="right">Subject 3:</td>
+                <td><input type="number" name="sub3" max="100" required></td>
+            </tr>
+            <tr>
+                <td align="right">Subject 4:</td>
+                <td><input type="number" name="sub4" max="100" required></td>
+            </tr>
+            <tr>
+                <td align="right">Subject 5:</td>
+                <td><input type="number" name="sub5" max="100" required></td>
+            </tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Show Details" onclick="showDetails()">
+                    <input type="button" value="Show Grade" onclick="showGrade()">
+                </td>
+            </tr>
+            </form>
+        </table> 
+        <div id="output"></div>
+        <script>
+            function showDetails() {
+                var name = document.getElementsByName("name")[0].value;
+                var Roll = document.getElementsByName("Roll")[0].value;
+                var gender = document.querySelector('input[name="gender"]:checked').value;
+                var branch = document.getElementsByName("branch")[0].value;
+                var sub1 = document.getElementsByName("sub1")[0].value;
+                var sub2 = document.getElementsByName("sub2")[0].value;
+                var sub3 = document.getElementsByName("sub3")[0].value;
+                var sub4 = document.getElementsByName("sub4")[0].value;
+                var sub5 = document.getElementsByName("sub5")[0].value;
+
+                var output = document.getElementById("output");
+                output.innerHTML = "<p>Name: " + name + "</p>" +
+                                   "<p>Roll Number: " + Roll + "</p>" +
+                                   "<p>Gender: " + gender + "</p>" +
+                                   "<p>Branch: " + branch + "</p>" +
+                                   "<p>Marks:</p>" +
+                                   "<p>Subject 1: " + sub1 + "</p>" +
+                                   "<p>Subject 2: " + sub2 + "</p>" +
+                                   "<p>Subject 3: " + sub3 + "</p>" +
+                                   "<p>Subject 4: " + sub4 + "</p>" +
+                                   "<p>Subject 5: " + sub5 + "</p>";
+            }
+
+            function showGrade() {
+                var sub1 = document.getElementsByName("sub1")[0].value;
+                var sub2 = document.getElementsByName("sub2")[0].value;
+                var sub3 = document.getElementsByName("sub3")[0].value;
+                var sub4 = document.getElementsByName("sub4")[0].value;
+                var sub5 = document.getElementsByName("sub5")[0].value;
+
+                var total = parseInt(sub1) + parseInt(sub2) + parseInt(sub3) + parseInt(sub4) + parseInt(sub5);
+                var percentage = total / 5;
+
+                var grade;
+                switch (true) {
+                    case (percentage >= 90):
+                        grade = "O";
+                        break;
+                    case (percentage >= 80):
+                        grade = "E";
+                        break;
+                    case (percentage >= 70):
+                        grade = "A";
+                        break;
+                    case (percentage >= 60):
+                        grade = "B";
+                        break;
+                    case (percentage >= 50):
+                        grade = "C";
+                        break;
+                    default:
+                        grade = "F (Fail)";
+                }
+
+                var output = document.getElementById("output");
+                output.innerHTML = "<p>Grade: " + grade + "</p>";
+            }
+        </script>
+    </body>
+</html>

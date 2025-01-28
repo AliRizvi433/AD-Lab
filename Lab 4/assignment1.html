@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>
+            Display Int
+        </title>
+        <script type="text/javascript">
+            function displayInt(){
+                var x = parseInt(document.getElementById("1").value);
+                document.getElementById("123").innerText = x;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="1">
+        <input type="button" value="Display" onclick="displayInt()">
+        <p id="123"></p>
+    </body>
+</html>

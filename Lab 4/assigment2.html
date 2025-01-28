@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Display Prime</title>
+    <script type="text/javascript">
+      function isPrime(num) {
+        if (num <= 1) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) return false;
+        }
+        return true;
+      }
+
+      function displayInt() {
+        var x = parseInt(document.getElementById("1").value);
+        var message = isPrime(x)
+          ? x + " is a prime number."
+          : x + " is not a prime number.";
+        document.getElementById("123").innerText = message;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="1" placeholder="enter a number" />
+    <input type="button" value="Display" onclick="displayInt()" />
+    <p id="123"></p>
+  </body>
+</html>

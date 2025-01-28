@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Array Operations</title>
+    <script>
+        let arr = [];
+
+        function addToArray() {
+            const inputValue = document.getElementById('inputValue').value;
+            arr.push(inputValue);
+            displayArray();
+        }
+
+        function popFromArray() {
+            arr.pop();
+            displayArray();
+        }
+
+        function shiftFromArray() {
+            arr.shift();
+            displayArray();
+        }
+
+        function unshiftToArray() {
+            const inputValue = document.getElementById('inputValue').value;
+            arr.unshift(inputValue);
+            displayArray();
+        }
+
+        function displayArray() {
+            document.getElementById('arrayDisplay').innerText = 'Array: ' + arr.join(', ');
+        }
+    </script>
+</head>
+<body>
+    <h1>Array Operations</h1>
+    <form onsubmit="return false;">
+        <label for="inputValue">Enter value:</label>
+        <input type="text" id="inputValue" name="inputValue">
+        <button type="button" onclick="addToArray()">Push</button>
+        <button type="button" onclick="popFromArray()">Pop</button>
+        <button type="button" onclick="shiftFromArray()">Shift</button>
+        <button type="button" onclick="unshiftToArray()">Unshift</button>
+    </form>
+    <p id="arrayDisplay">Array: </p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Names List</title>
+    <script>
+        let names = [];
+
+        function addName() {
+            const nameInput = document.getElementById('nameInput').value;
+            if (nameInput) {
+                names.push(nameInput);
+                displayNames();
+                document.getElementById('nameInput').value = '';
+            }
+        }
+
+        function displayNames() {
+            let namesList = '';
+            for (let i = 0; i < names.length; i++) {
+                namesList += names[i] + '<br>';
+            }
+            document.getElementById('namesDisplay').innerHTML = namesList;
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Names</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="addName()">Add Name</button>
+    <p id="namesDisplay"></p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Interactive Array Builder</title>
+</head>
+<body>
+    <h1>Interactive Array Builder</h1>
+    <input type="text" id="arrayValue" placeholder="Enter a value">
+    <button onclick="addValue()">Add Value</button>
+    
+    <h2>Array:</h2>
+    <p id="arrayDisplay">[]</p>
+    <input type="text" id="searchValue" placeholder="Enter value to search">
+    
+    <button onclick="searchValue()">Search Value</button>
+    <p id="searchResult"></p>
+
+    <script>
+        let array = [];
+
+        function addValue() {
+            const value = document.getElementById('arrayValue').value;
+            if (value) {
+                array.push(value);
+                document.getElementById('arrayValue').value = '';
+                document.getElementById('arrayDisplay').innerText = JSON.stringify(array);
+            }
+        }
+
+        function searchValue() {
+            const value = document.getElementById('searchValue').value;
+            const index = array.indexOf(value);
+            if (index !== -1) {
+                document.getElementById('searchResult').innerText = `Value found at index: ${index}`;
+            } else {
+                document.getElementById('searchResult').innerText = 'Value not found';
+            }
+        }
+    </script>
+</body>
+</html>

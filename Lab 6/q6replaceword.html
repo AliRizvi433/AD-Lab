@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Replace Word</title>
+    <script>
+        function showMessage() {
+            const message = document.getElementById('message').value;
+            document.getElementById('output').innerText = message;
+        }
+
+        function replaceWord() {
+            const message = document.getElementById('message').value;
+            const searchWord = document.getElementById('searchWord').value;
+            const replaceWord = prompt('Enter the word to replace with:');
+            const regex = new RegExp(searchWord, 'g');
+            const modifiedMessage = message.replace(regex, replaceWord);
+            document.getElementById('output').innerText = modifiedMessage;
+        }
+    </script>
+</head>
+<body>
+    <h1>Replace the Searched Word/Text</h1>
+    <form>
+        <textarea id="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea><br><br>
+        <input type="text" id="searchWord" placeholder="Enter word to search"><br><br>
+        <button type="button" onclick="showMessage()">Show Message</button>
+        <button type="button" onclick="replaceWord()">Replace Word</button>
+    </form>
+    <p id="output"></p>
+</body>
+</html>

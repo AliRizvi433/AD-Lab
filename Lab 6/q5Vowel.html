@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Vowel Replacer</title>
+    <script>
+        function replaceVowels() {
+            const inputText = document.getElementById('inputText').value;
+            const modifiedText = inputText.replace(/[aeiouAEIOU]/g, '*');
+            document.getElementById('outputText').innerText = modifiedText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Vowel Replacer</h1>
+    <form onsubmit="event.preventDefault(); replaceVowels();">
+        <textarea id="inputText" rows="4" cols="50" placeholder="Enter your text here"></textarea><br>
+        <button type="submit">Replace Vowels</button>
+    </form>
+    <h2>Modified Text:</h2>
+    <p id="outputText"></p>
+</body>
+</html>

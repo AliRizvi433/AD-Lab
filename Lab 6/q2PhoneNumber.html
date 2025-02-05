@@ -1,25 +1,22 @@
 <html>
-    <head>
-        <title>
-            Phone Number Validator
-        </title>
-    </head>
-    <body>
-        <script>
-            function checkPhone(){
-                const phone = document.getElementById('phone').value;
-                const res = /^[0-9]{10}$/;
-                if(res.test(phone)){
-                    document.getElementById('result').innerText = 'valid number';
-                }
-                else{
-                    document.getElementById('result').innerText = 'invalid number';
-                }
-            }
-        </script>
-        <h1>Phone Number Checker</h1>
-        <input type="text" id="phone" placeholder="Enter your phone number">
-        <button onclick="checkPhone()">Check Number</button>
-        <p id="result"></p>
-    </body>
+  <head>
+    <title>Phone Number Validator</title>
+  </head>
+  <body>
+    <script>
+      function checkPhone() {
+        const phone = document.getElementById("phone").value;
+        const res = /^[0-9]{10}$/;
+        if (res.test(phone)) {
+          document.getElementById("result").innerText = "valid number";
+        } else {
+          document.getElementById("result").innerText = "invalid number";
+        }
+      }
+    </script>
+    <h1>Phone Number Checker</h1>
+    <input type="text" id="phone" placeholder="Enter your phone number" />
+    <button onclick="checkPhone()">Check Number</button>
+    <p id="result"></p>
+  </body>
 </html>

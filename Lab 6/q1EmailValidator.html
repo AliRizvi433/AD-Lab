@@ -1,22 +1,22 @@
 <html>
-    <head>
-        <title>Email Validator</title>
-    </head>
-    <body>
-        <script>
-            function checkEmail() {
-                const email = document.getElementById('email').value
-                const emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,6}$/;
-                if(emailPattern.test(email)){
-                    document.getElementById('result').innerText = 'Valid email';
-                } else {
-                    document.getElementById('result').innerText = 'Invalid email';
-                }
-            }
-        </script>
-        <h1>Email Validator</h1>
-        <input type="text" id="email" placeholder="Enter your email">
-        <button onclick="checkEmail()">Check</button>
-        <p id="result"></p>
-    </body>
+  <head>
+    <title>Email Validator</title>
+  </head>
+  <body>
+    <script>
+      function checkEmail() {
+        const email = document.getElementById("email").value;
+        const emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,6}$/;
+        if (emailPattern.test(email)) {
+          document.getElementById("result").innerText = "Valid email";
+        } else {
+          document.getElementById("result").innerText = "Invalid email";
+        }
+      }
+    </script>
+    <h1>Email Validator</h1>
+    <input type="text" id="email" placeholder="Enter your email" />
+    <button onclick="checkEmail()">Check</button>
+    <p id="result"></p>
+  </body>
 </html>
